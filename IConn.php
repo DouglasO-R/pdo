@@ -1,5 +1,5 @@
 <?php
 
  interface IConn{
-	public function conect();
+	public function connect();
 }
