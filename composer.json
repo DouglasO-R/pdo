@@ -1,0 +1,17 @@
+{
+	"name":"Pdo",
+	"description":"poo avançado com Pdo",
+	"authors":[
+		{
+			"name":"Douglas O. Ribeiro",
+			"email":"douglasor@outlook.com"
+		}
+	],
+	
+	"autoload": {
+		"psr-4": {"Source\\":"src/Source"}
+	},
+	"require": {
+		"pimple/pimple": "^3.0"
+	}
+}

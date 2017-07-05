@@ -1,6 +1,7 @@
 <?php
+namespace Source;
 
-class ServiceProduct{
+class ServiceProduct implements IServiceProduct{
 
 	private $db;
 	private $product;
@@ -9,10 +10,6 @@ class ServiceProduct{
 		$this->db = $db->connect();
 		$this->product = $product;
 	}
-
-
-
-
 
 	public function listar(){
 

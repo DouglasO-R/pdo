@@ -1,4 +1,5 @@
 <?php
+namespace Source;
 
 class Product implements IProduct{
 
