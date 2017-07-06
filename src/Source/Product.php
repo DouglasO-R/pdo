@@ -37,3 +37,30 @@ class Product implements IProduct{
         return $this;
     }
 }
+
+/*
+class Person
+{
+    private $personName = array();
+    
+    public function setPrefix($prefix)
+    {
+        $this->personName['prefix'] = $prefix;
+    }
+    
+    public function getPrefix()
+    {
+        return $this->personName['prefix'];
+    }
+    
+    public function setGivenName($gn)
+    {
+        $this->personName['givenName'] = $gn;
+    }
+    
+    public function getGivenName()
+    {
+        return $this->personName['givenName'];
+    }
+
+*/
