@@ -8,7 +8,7 @@ class Conn implements IConn{
 	private $user;
 	private $pass;
 	
-	public function __construct($host,$dbname,$user,$pass){
+	public function _construct($host,$dbname,$user,$pass){
 		$this->host = $host;
 		$this->dbname = $dbname;
 		$this->user = $user;
