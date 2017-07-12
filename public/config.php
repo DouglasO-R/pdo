@@ -5,7 +5,9 @@ use Pimple\Container;
 
 $container = new Container;
 
-$container['host'] = $_ENV["DATABASE_TESTHOST"];
-$container['dbname'] = $_ENV["DATABASE_TESTDBNAME"];
-$container['user'] = $_ENV["DATABASE_TESTDBUSER"];
-$container['pass'] = $_ENV["DATABASE_TESTDBPASS"];
+
+$container['host'] = isset($_ENV["DATABASE_TESTHOST"]) ? $_ENV["DATABASE_TESTHOST"] : $_ENV["DATABASE_HOST"];
+$container['dbname'] = isset($_ENV["DATABASE_TESTDBNAME"]) ? $_ENV["DATABASE_TESTDBNAME"] : "";
+$container['user'] = isset($_ENV["DATABASE_TESTDBUSER"]) ? $_ENV["DATABASE_TESTDBUSER"] : $_ENV["DATABASE_USER"];
+$container['pass'] = isset($_ENV["DATABASE_TESTDBPASS"]) ? $_ENV["DATABASE_TESTDBPASS"] : $_ENV["DATABASE_PASS"];
+

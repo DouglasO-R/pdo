@@ -32,8 +32,8 @@ class ServiceProduct implements IServiceProduct{
 		try{
 		$query = " insert into produtos(nome,descricao) values(:nome,:descricao)";
 		$stmt = $this->db->prepare($query);
-		$stmt->bindValue(":nome",$this->product->getNome());
-		$stmt->bindValue(":descricao",$this->product->getDescricao());
+		$stmt->bindValue(":nome",$_POST['nome']);
+		$stmt->bindValue(":descricao",$_POST['descricao']);
 		$stmt->execute();
 		return $this->db->lastInsertId();
 
@@ -50,9 +50,9 @@ class ServiceProduct implements IServiceProduct{
 
 			$stmt = $this->db->prepare($query);
 
-			$stmt->bindValue(1,$this->product->getNome());
-		    $stmt->bindValue(2,$this->product->getDescricao());
-		    $stmt->bindValue(3,$this->product->getId());
+			$stmt->bindValue(1,$_POST['nome']);
+		    $stmt->bindValue(2,$_POST['descricao']);
+		    $stmt->bindValue(3,$_POST['id']);
 			
 			$return = $stmt->execute(); 
 

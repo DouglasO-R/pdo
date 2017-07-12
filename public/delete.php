@@ -1,17 +1,15 @@
 <?php
-
 namespace Source;
 
 require_once "../vendor/autoload.php";
 require_once "config.php";
 require_once "service.php";
 
-$list = $container['service']->listar();
+header("Location: index.php");
 
-if($_POST){
- 
-}else{}
+$id = $_POST['id'];
+print_r($id);
 
-require_once "list.product.php";
+$delete = $container['service']->delete($id);
 
-//
+
